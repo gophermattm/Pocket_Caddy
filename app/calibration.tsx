@@ -8,11 +8,6 @@ import {
   TextInput,
   Alert,
 } from "react-native";
-import { 
-  Ruler, 
-  Target,
-  CheckCircle,
-} from "lucide-react-native";
 import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useGolf } from "@/providers/GolfProvider";
@@ -135,7 +130,7 @@ export default function CalibrationScreen() {
 
           <View style={styles.section}>
             <View style={styles.sectionHeader}>
-              <Target size={20} color={COLORS.primary} />
+              <Feather name="target" size={20} color={COLORS.primary} />
               <Text style={styles.sectionTitle}>Step 2: Test Putt</Text>
             </View>
             <Text style={styles.sectionDescription}>

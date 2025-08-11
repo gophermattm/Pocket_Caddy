@@ -1,3 +1,4 @@
+import { Feather } from "@expo/vector-icons";
 import React from "react";
 import {
   StyleSheet,
@@ -6,7 +7,6 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
-import { MapPin, Flag, Navigation, Layers } from "lucide-react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useHaptics } from "@/hooks/useHaptics";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
@@ -42,7 +42,7 @@ export default function CourseScreen() {
       <SafeAreaView style={styles.container} edges={['top']}>
         <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
           <View style={styles.courseHeader}>
-            <MapPin size={20} color={COLORS.primary} />
+            <Feather name="map-pin" size={20} color={COLORS.primary} />
             <Text style={styles.courseName}>Pebble Beach Golf Links</Text>
           </View>
 
@@ -53,17 +53,17 @@ export default function CourseScreen() {
             </View>
             <View style={styles.distanceGrid}>
               <View style={styles.distanceItem}>
-                <Flag size={16} color={COLORS.text.secondary} />
+                <Feather name="flag" size={16} color={COLORS.text.secondary} />
                 <Text style={styles.distanceLabel}>Front</Text>
                 <Text style={styles.distanceValue}>{currentHole.frontDistance}</Text>
               </View>
               <View style={styles.distanceItem}>
-                <Navigation size={16} color={COLORS.primary} />
+                <Feather name="navigation" size={16} color={COLORS.primary} />
                 <Text style={styles.distanceLabel}>Center</Text>
                 <Text style={styles.distanceValue}>{currentHole.centerDistance}</Text>
               </View>
               <View style={styles.distanceItem}>
-                <Flag size={16} color={COLORS.text.secondary} />
+                <Feather name="flag" size={16} color={COLORS.text.secondary} />
                 <Text style={styles.distanceLabel}>Back</Text>
                 <Text style={styles.distanceValue}>{currentHole.backDistance}</Text>
               </View>
@@ -95,7 +95,7 @@ export default function CourseScreen() {
 
           <View style={styles.hazardsCard}>
             <View style={styles.cardHeader}>
-              <Layers size={20} color={COLORS.primary} />
+              <Feather name="layers" size={20} color={COLORS.primary} />
               <Text style={styles.cardTitle}>Hazards</Text>
             </View>
             <View style={styles.hazardsList}>

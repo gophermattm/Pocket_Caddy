@@ -1,3 +1,4 @@
+import { Feather } from "@expo/vector-icons";
 import React, { useEffect, useState, useMemo } from "react";
 import {
   StyleSheet,
@@ -7,15 +8,6 @@ import {
   ScrollView,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { 
-  Camera, 
-  Wind, 
-  Droplets, 
-  Thermometer,
-  Activity,
-  ChevronRight,
-  Info
-} from "lucide-react-native";
 import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useGolf } from "@/providers/GolfProvider";
@@ -86,9 +78,9 @@ export default function GreenReaderHome() {
                 colors={[COLORS.primary, COLORS.secondary]}
                 style={styles.buttonGradient}
               >
-                <Camera size={32} color={COLORS.text.white} />
+                <Feather name="camera" size={32} color={COLORS.text.white} />
                 <Text style={styles.buttonText}>Start Green Reading</Text>
-                <ChevronRight size={24} color={COLORS.text.white} />
+                <Feather name="chevron-right" size={24} color={COLORS.text.white} />
               </LinearGradient>
             </TouchableOpacity>
 
@@ -122,22 +114,22 @@ export default function GreenReaderHome() {
               </View>
               <View style={styles.weatherGrid}>
                 <View style={styles.weatherItem}>
-                  <Thermometer size={20} color={COLORS.primary} />
+                  <Feather name="thermometer" size={20} color={COLORS.primary} />
                   <Text style={styles.weatherValue}>{weather?.temp || "--"}°</Text>
                   <Text style={styles.weatherLabel}>Temp</Text>
                 </View>
                 <View style={styles.weatherItem}>
-                  <Wind size={20} color={COLORS.primary} />
+                  <Feather name="wind" size={20} color={COLORS.primary} />
                   <Text style={styles.weatherValue}>{weather?.windSpeed || "--"}</Text>
                   <Text style={styles.weatherLabel}>mph</Text>
                 </View>
                 <View style={styles.weatherItem}>
-                  <Droplets size={20} color={COLORS.primary} />
+                  <Feather name="droplets" size={20} color={COLORS.primary} />
                   <Text style={styles.weatherValue}>{weather?.humidity || "--"}%</Text>
                   <Text style={styles.weatherLabel}>Humidity</Text>
                 </View>
                 <View style={styles.weatherItem}>
-                  <Activity size={20} color={COLORS.primary} />
+                  <Feather name="activity" size={20} color={COLORS.primary} />
                   <Text style={styles.weatherValue}>{settings.greenSpeed}</Text>
                   <Text style={styles.weatherLabel}>Stimp</Text>
                 </View>
@@ -155,13 +147,13 @@ export default function GreenReaderHome() {
                     Improve accuracy with a test putt
                   </Text>
                 </View>
-                <ChevronRight size={20} color={COLORS.primary} />
+                <Feather name="chevron-right" size={20} color={COLORS.primary} />
               </View>
             </TouchableOpacity>
 
             <View style={styles.tipCard}>
               <View style={styles.tipHeader}>
-                <Info size={16} color={COLORS.primary} />
+                <Feather name="info" size={16} color={COLORS.primary} />
                 <Text style={styles.tipTitle}>Pro Tip</Text>
               </View>
               <Text style={styles.tipText}>{quickTip}</Text>

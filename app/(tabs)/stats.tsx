@@ -1,3 +1,4 @@
+import { Feather } from "@expo/vector-icons";
 import React from "react";
 import {
   StyleSheet,
@@ -5,7 +6,6 @@ import {
   View,
   ScrollView,
 } from "react-native";
-import { TrendingUp, Target, Percent, Award } from "lucide-react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { COLORS } from "@/constants";
@@ -50,22 +50,22 @@ export default function StatsScreen() {
         <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
           <View style={styles.statsGrid}>
             <View style={styles.statCard}>
-              <Target size={24} color={COLORS.primary} />
+              <Feather name="target" size={24} color={COLORS.primary} />
               <Text style={styles.statValue}>{stats.totalReads}</Text>
               <Text style={styles.statLabel}>Total Reads</Text>
             </View>
             <View style={styles.statCard}>
-              <Percent size={24} color={COLORS.primary} />
+              <Feather name="percent" size={24} color={COLORS.primary} />
               <Text style={styles.statValue}>{stats.avgAccuracy}%</Text>
               <Text style={styles.statLabel}>Accuracy</Text>
             </View>
             <View style={styles.statCard}>
-              <TrendingUp size={24} color={COLORS.primary} />
+              <Feather name="trending-up" size={24} color={COLORS.primary} />
               <Text style={styles.statValue}>+{stats.improvementRate}%</Text>
               <Text style={styles.statLabel}>Improvement</Text>
             </View>
             <View style={styles.statCard}>
-              <Award size={24} color={COLORS.primary} />
+              <Feather name="award" size={24} color={COLORS.primary} />
               <Text style={styles.statValue}>{stats.successRate}%</Text>
               <Text style={styles.statLabel}>Success Rate</Text>
             </View>

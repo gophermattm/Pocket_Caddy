@@ -230,3 +230,16 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
   },
   sectionTitle
+  const styles = StyleSheet.create({
+    row: {
+      paddingVertical: 8,
+    }, // ← ensure this comma exists
+    sectionTitle: {
+      fontSize: 12,
+      fontWeight: "600",
+      color: "#999",
+      textTransform: "uppercase",
+      letterSpacing: 0.5,
+      marginBottom: 8,
+    },
+  });

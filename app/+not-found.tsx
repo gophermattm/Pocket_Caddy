@@ -1,7 +1,7 @@
+import { Feather } from "@expo/vector-icons";
 import React from "react";
 import { Stack, useRouter } from "expo-router";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import { Home } from "lucide-react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useHaptics } from "@/hooks/useHaptics";
 import { COLORS } from "@/constants";
@@ -29,7 +29,7 @@ export default function NotFoundScreen() {
             style={styles.homeButton}
             onPress={handleGoHome}
           >
-            <Home size={20} color={COLORS.text.white} />
+            <Feather name="home" size={20} color={COLORS.text.white} />
             <Text style={styles.homeButtonText}>Go to Home</Text>
           </TouchableOpacity>
         </View>

@@ -1,3 +1,4 @@
+import { Feather } from "@expo/vector-icons";
 import React, { useState, useRef, useEffect, useMemo } from "react";
 import {
   StyleSheet,
@@ -8,13 +9,6 @@ import {
   Dimensions,
 } from "react-native";
 import { CameraView, useCameraPermissions } from "expo-camera";
-import { 
-  X, 
-  Circle, 
-  Target,
-  RotateCw,
-  Check
-} from "lucide-react-native";
 import { useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useGolf } from "@/providers/GolfProvider";
@@ -186,7 +180,7 @@ export default function GreenReaderScreen() {
                   </View>
                   
                   <View style={styles.targetGuide}>
-                    <Target size={24} color={COLORS.text.white} strokeWidth={2} />
+                    <Feather name="target" size={24} color={COLORS.text.white} strokeWidth={2} />
                     <Text style={styles.guideText}>Hole</Text>
                   </View>
                 </View>
